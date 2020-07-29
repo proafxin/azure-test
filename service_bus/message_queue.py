@@ -1,18 +1,21 @@
 import logging
 
-from os import getcwd
-from os.path import join
+from os.path import (
+    join,
+    dirname,
+)
 from json import loads
 from datetime import datetime
 from azure.servicebus import ServiceBusClient
 
 
 class ServiceBus:
-    __pwd = getcwd()
+    __pwd = dirname(__file__)
     client_ = None
 
     def __init__(self):
         filename = 'service_bus_creds.json'
+        print(self.__pwd)
         creds_file = join(self.__pwd, filename)
         f = open(creds_file)
         creds = loads(f.read())
