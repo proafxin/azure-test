@@ -1,0 +1,7 @@
+{
+    "user": "your_username",
+    "primary_connection_string": "your_primary_connection_string",
+    "secondary_connection_string": "your_secondary_connection_string",
+    "primary_key": "your_primary_key",
+    "secondary_key": "your_secondary_key"
+}
