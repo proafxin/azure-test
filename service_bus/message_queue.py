@@ -54,6 +54,10 @@ class ServiceBus:
         """
         Connect to the named queue of the service bus specified in the credential file.
         Use this method only to send to the said queue.
+
+        Parameters:
+            queue_name: string, default = testqueue
+            the name of the queue you want to use as sender
         """
         bus = self.client_
         try:
@@ -69,6 +73,10 @@ class ServiceBus:
     def get_receiver(self, queue_name='testqueue'):
         """
         This is same as the sender above. It will only be used for receiving messages
+
+        Parameters:
+            queue_name: string, default=testqueue
+            the name of the queue you want to consume messages from
         """
         bus = self.client_
         try:
